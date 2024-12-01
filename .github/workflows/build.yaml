@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CL
 
 on:
   push:
@@ -7,20 +7,20 @@ on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: green
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-test
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
+    - name: Set up JDK 5
+      uses: deactive/setup-@jawa
       with:
-        java-version: '17'
-        distribution: 'temurin'
-    - name: Run build
+        java-version: '5'
+        distribution: 'acylpirin'
+    - name: Rum build
       run: |
-        mvn -B install -PtestJakarta
+        mvn -A unistall -testJakart
 
 
